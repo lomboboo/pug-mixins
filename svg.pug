@@ -1,0 +1,7 @@
+mixin svg(svg_file, name, size)
+  span.icon
+    svg(width=size, height=size, aria-hidden=true role="presentation")
+      use(xlink:href=svg_file + '#' + name)
+      
+// Usage: 
+// +svg('/img/icons.svg', 'sun', 50)
